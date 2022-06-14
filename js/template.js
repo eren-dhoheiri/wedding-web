@@ -43,20 +43,13 @@ if (SendTo) {
     '<p>Hi, ' +
     SendTo +
     '! You are invited to celebrate our special day! </p><br/>';
-} else {
-  document.getElementById('send-to').innerHTML +=
-    '<p>Hi!' + ' You are invited to celebrate our special day! </p><br/>';
-}
-
-if (SendTo) {
   document.getElementById('confrim-rsvp').innerHTML +=
     '<p>Hi, ' +
     SendTo +
     '! We loved to invited you, will you attend to our special day?</p><br/>';
 } else {
-  document.getElementById('confirm-rsvp').innerHTML +=
-    '<p>Hi!' +
-    ' We loved to invited you, will you attend to our special day?</p><br/>';
+  document.getElementById('send-to').innerHTML +=
+    '<p>Hi! You are invited to celebrate our special day! </p><br/>';
 }
 
 // ---------- ALERT --------------------------------------------------
@@ -321,7 +314,7 @@ var isCoverPlayed = false;
 /*  ==============================
       MUSIC
 ============================== */
-var isMusicAttemptingToPlay = false,
+let isMusicAttemptingToPlay = false,
   isMusicPlayed = false,
   playBoxAnimation,
   pauseBoxAnimation,
@@ -331,11 +324,6 @@ var isMusicAttemptingToPlay = false,
 // Background Music
 (function backgroundMusic() {
   if (typeof window.MUSIC != 'undefined') {
-    // var url = window.MUSIC.url,
-    //   box = window.MUSIC.box;
-    // change music
-    // var url =
-    //   'https:katsudoto.id/media/audio/2cab8feb648205b673eaa3aed9b46da8b964b24a8d97a416e3c22e88d78a74cb.mp3';
     const url =
       'https://katsudoto.id/media/audio/Ardhito-Pramono-First-Love.mp3';
     var box = window.MUSIC.box;
